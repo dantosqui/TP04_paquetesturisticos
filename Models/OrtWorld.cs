@@ -8,7 +8,7 @@ class OrtWorld {
     static public Dictionary<string,Paquete> Paquetes {get; private set;}
 
     
-    bool IngresarPaquete(string destinoSeleccionado, Paquete paquete) {
+    public bool IngresarPaquete(string destinoSeleccionado, Paquete paquete) {
         bool e;
 
         e=Paquetes.ContainsKey(destinoSeleccionado);
