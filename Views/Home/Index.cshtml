@@ -2,4 +2,16 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>TP XX - Index</h1>
+<h1>TP 04 - Paquetes  turisticos</h1>
+<h2>bienvenido a ortworld paquetes turisticos para crear un paquete haga click en crear paquete:</h2>
+
+<a href="selectpaquete.cshtml"> Crear paquete </a>
+
+<h2>Paquetes Creados:</h2>
+    @foreach(var i in ViewBag.Paquetes) {
+        <h5>@i.Key</h5>
+        <img src=@i.Value.Aereo></img>
+        <img src=@i.Value.Excursion></img>
+        <img src=@i.Value.Hotel></img>
+    }
+
