@@ -15,4 +15,19 @@
 @for (int i = 0; i<ViewBag.ListaExcursiones.Count(); i++) {
     <img src= @ViewBag.ListaExcursiones[i]> </img>
 }
+<input type="number"> </input>
+
+<h3>Seleccione Hotel</h3>
+@for (int i = 0; i<ViewBag.ListaHoteles.Count(); i++) {
+    <img src= @ViewBag.ListaHoteles[i]> </img>
+}
+<input type="number"> </input>
+
+<h3>Seleccione Aerolinea</h3>
+@for (int i = 0; i<ViewBag.ListaAereos.Count(); i++) {
+    <img src= @ViewBag.ListaAereos[i]> </img>
+}
+<input type="number"> </input>
+
+<input type="submit" value="Crear"> </input>
 </form>

@@ -7,6 +7,7 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         ViewBag.paquetes =OrtWorld.Paquetes;
+        ViewBag.h=OrtWorld.Paquetes.Count() == 0 ? true : false;
         return View();
     }
     public IActionResult SelectPaquete(){
