@@ -1,4 +1,4 @@
-namespace TPBase.Models;
+namespace TP04_paquetesturisticos.Models;
 
 public class ErrorViewModel
 {
