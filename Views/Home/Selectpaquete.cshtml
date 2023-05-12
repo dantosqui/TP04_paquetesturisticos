@@ -2,6 +2,10 @@
     ViewData["Title"] = "Seleccionar Paquete";
 }
 
+@if(ViewBag.error) {
+    <p>Error. Por favor ingrese los datos nuevamente y de forma correcta.</p>
+}
+
 <form action='@Url.Action("GuardarPaquete")'>
     <h3>Seleccione el destino:</h3>
     <ol>
