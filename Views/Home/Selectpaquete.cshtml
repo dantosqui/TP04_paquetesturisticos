@@ -3,31 +3,35 @@
 }
 
 <form action='@Url.Action("GuardarPaquete")'>
-<h3>Seleccione el destino:</h3>
-<ol>
-    @for (int i = 0; i < ViewBag.ListaDestinos.Count; i++)
-    {
-        <li>@ViewBag.ListaDestinos[i]</li>
+    <h3>Seleccione el destino:</h3>
+    <ol>
+        @for (int i = 0; i < ViewBag.ListaDestinos.Count; i++)
+        {
+            <li>@ViewBag.ListaDestinos[i]</li>
+        }
+    </ol>
+    <input type="number" name="destino"> </input>
+
+    <h3>Seleccione Excursion</h3>
+    @foreach(var i in ViewBag.ListaExcursiones) {
+        <img src="@Url.Content(i)" width="18%" height="auto" alt="excursion"> </img>
     }
-</ol>
-<input type="number" name="destino"> </input>
-<h3>Seleccione Excursion</h3>
-@for (int i = 0; i<ViewBag.ListaExcursiones.Count; i++) {
-    <img src="@ViewBag.ListaExcursiones[i]"> </img>
-}
-<input type="number" name="excursion"> </input>
+    <br>
+    <input type="number" name="excursion"> </input>
 
-<h3>Seleccione Hotel</h3>
-@for (int i = 0; i<ViewBag.ListaHoteles.Count; i++) {
-    <img src=@ViewBag.ListaHoteles[i] width="500" height="500">
-}
-<input type="number" name="hotel"> </input>
+    <h3>Seleccione Hotel</h3>
+    @foreach(var i in ViewBag.ListaHoteles) {
+        <img src="@Url.Content(i)" width="18%" height="auto" alt="hotel"> </img>
+    }
+    <br>
+    <input type="number" name="hotel"> </input>
 
-<h3>Seleccione Aerolinea</h3>
-@for (int i = 0; i<ViewBag.ListaAereos.Count; i++) {
-    <img src= "@ViewBag.ListaAereos[i]" > </img>
-}
-<input type="number" name="aereo"> </input>
+    <h3>Seleccione Aerolinea</h3>
+    @foreach(var i in ViewBag.ListaAereos) {
+        <img src="@Url.Content(i)" width="18%" height="auto" alt="aerolinea"> </img>
+    }
+    <br>
+    <input type="number" name="aereo"> </input>
 
-<input type="submit" value="Crear"> </input>
+    <input type="submit" value="Crear"> </input>
 </form>

@@ -16,9 +16,9 @@
 
     @foreach(var i in ViewBag.paquetes) {
         <h5>@i.Key</h5>
-        <img src=@i.Value.Aereo></img>
-        <img src=@i.Value.Excursion></img>
-        <img src=@i.Value.Hotel></img>
+        <img src="@Url.Content(i.Value.Aereo)"></img>
+        <img src="@Url.Content(i.Value.Excursion)"></img>
+        <img src="@Url.Content(i.Value.Hotel)"></img>
     }
 }
 
