@@ -3,7 +3,7 @@
 }
 
 <h1>TP 04 - Paquetes  turisticos</h1>
-<h2>bienvenido a ortworld paquetes turisticos para crear un paquete haga click en crear paquete:</h2>
+<h2>Bienvenido a ortworld paquetes turisticos para crear un paquete haga click en crear paquete:</h2>
 
 <a href='@Url.Action("SelectPaquete")'> Crear paquete </a>
 
@@ -15,10 +15,10 @@
     
 
     @foreach(var i in ViewBag.paquetes) {
-        <h5>@i.Key</h5>
-        <img src="@Url.Content(i.Value.Aereo)"></img>
-        <img src="@Url.Content(i.Value.Excursion)"></img>
-        <img src="@Url.Content(i.Value.Hotel)"></img>
+        <h4>@i.Key</h4>
+        <img src="@Url.Content(i.Value.Aereo)" width="18%" height="auto" alt="Aerolinea"></img>
+        <img src="@Url.Content(i.Value.Excursion)"width="18%" height="auto" alt="Excursion"></img>
+        <img src="@Url.Content(i.Value.Hotel)"width="18%" height="auto" alt="Hotel"></img>
     }
 }
 
