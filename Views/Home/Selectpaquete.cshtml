@@ -24,7 +24,6 @@
             <img src="@Url.Content(i)" width="19%" height="auto" alt="excursion"> </img>
         }
     </div>
-    <br>
     <input type="number" name="excursion"> </input>
 
     <h3>Seleccione Hotel</h3>
@@ -32,9 +31,8 @@
     @foreach(var i in ViewBag.ListaHoteles) {
         <img src="@Url.Content(i)" width="19%" height="auto" alt="hotel"> </img>
     }
-    <br> 
     </div>
-
+    <br>
     <input type="number" name="hotel"> </input>
     
     <h3>Seleccione Aerolinea</h3>
@@ -44,6 +42,8 @@
     }</div>
     <br>
     <input type="number" name="aereo"> </input>
+    <br/>
 
     <input type="submit" value="Crear"> </input>
+    
 </form>
