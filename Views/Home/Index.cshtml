@@ -16,10 +16,13 @@
 
     @foreach(var i in ViewBag.paquetes) {
         <div>
-            <h4>@i.Key</h4>
-            <img src="@Url.Content(i.Value.Aereo)" width="18%" height="auto" alt="Aerolinea"></img>
-            <img src="@Url.Content(i.Value.Excursion)"width="18%" height="auto" alt="Excursion"></img>
-            <img src="@Url.Content(i.Value.Hotel)"width="18%" height="auto" alt="Hotel"></img>
+            <h4>Destino: @i.Key</h4>
+            <h5 >Aerolinea:</h5>
+            <img src="@Url.Content(i.Value.Aereo)" width="auto" height="auto" alt="Aerolinea"></img>
+            <h5>Excursion:</h5>
+            <img src="@Url.Content(i.Value.Excursion)"width="auto" height="auto" alt="Excursion"></img>
+            <h5 >Hotel:</h5>
+            <img src="@Url.Content(i.Value.Hotel)"width="auto" height="auto" alt="Hotel"></img>
         </div>
     }
 }
