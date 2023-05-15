@@ -2,6 +2,8 @@
     ViewData["Title"] = "Seleccionar Paquete";
 }
 
+<link rel="stylesheet" href="@Url.Content("~/css/selectpaquete.css")" asp-append-version="true" />
+
 @if(ViewBag.error) {
     <p>Error. Por favor ingrese los datos nuevamente y de forma correcta.</p>
 }
@@ -17,23 +19,29 @@
     <input type="number" name="destino"> </input>
 
     <h3>Seleccione Excursion</h3>
-    @foreach(var i in ViewBag.ListaExcursiones) {
-        <img src="@Url.Content(i)" width="18%" height="auto" alt="excursion"> </img>
-    }
+    <div> 
+        @foreach(var i in ViewBag.ListaExcursiones) {
+            <img src="@Url.Content(i)" width="19%" height="auto" alt="excursion"> </img>
+        }
+    </div>
     <br>
     <input type="number" name="excursion"> </input>
 
     <h3>Seleccione Hotel</h3>
+    <div>
     @foreach(var i in ViewBag.ListaHoteles) {
-        <img src="@Url.Content(i)" width="18%" height="auto" alt="hotel"> </img>
+        <img src="@Url.Content(i)" width="19%" height="auto" alt="hotel"> </img>
     }
-    <br>
-    <input type="number" name="hotel"> </input>
+    <br> 
+    </div>
 
+    <input type="number" name="hotel"> </input>
+    
     <h3>Seleccione Aerolinea</h3>
+    <div>
     @foreach(var i in ViewBag.ListaAereos) {
-        <img src="@Url.Content(i)" width="18%" height="auto" alt="aerolinea"> </img>
-    }
+        <img src="@Url.Content(i)" width="19%" height="auto" alt="aerolinea"> </img>
+    }</div>
     <br>
     <input type="number" name="aereo"> </input>
 

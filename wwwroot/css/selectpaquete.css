@@ -1,0 +1,25 @@
+div div{
+    
+    border:4px;
+    border-style:solid;
+    border-color: rgb(11, 39, 100);
+    width: 100%;
+}
+
+input[type=number] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: rgb(222, 226, 213);
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 5px 10px 5px 20px;
+    transition: width 0.4s ease-in-out;
+    text-align: center;
+  }
+  
+  input[type=number]:focus {
+    width: 40%;
+  }

@@ -5,6 +5,9 @@ a{
 div h1{
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+div h1, h2 {
+    text-align: center;
+}
 
 div section{
     border-color: blueviolet;
@@ -24,4 +27,7 @@ div section div {
     float:left;
     padding: 5px;
     width: 32%;
+}
+div section div h5{
+    text-align: center;
 }
