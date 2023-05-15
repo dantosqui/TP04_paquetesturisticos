@@ -15,15 +15,15 @@
     
 
     @foreach(var i in ViewBag.paquetes) {
-        <div>
+        <section>
             <h4>Destino: @i.Key</h4>
-            <h5 >Aerolinea:</h5>
-            <img src="@Url.Content(i.Value.Aereo)" width="auto" height="auto" alt="Aerolinea"></img>
-            <h5>Excursion:</h5>
-            <img src="@Url.Content(i.Value.Excursion)"width="auto" height="auto" alt="Excursion"></img>
-            <h5 >Hotel:</h5>
-            <img src="@Url.Content(i.Value.Hotel)"width="auto" height="auto" alt="Hotel"></img>
-        </div>
+            <div><h5>Aerolinea:</h5>
+            <img src="@Url.Content(i.Value.Aereo)" width="100%" height="auto" alt="Aerolinea"></img></div>
+            <div><h5>Excursion:</h5>
+            <img src="@Url.Content(i.Value.Excursion)"width="100%" height="auto" alt="Excursion"></img></div>
+            <div><h5 >Hotel:</h5>
+            <img src="@Url.Content(i.Value.Hotel)"width="100%" height="auto" alt="Hotel"></img></div>
+        </section>
     }
 }
 
