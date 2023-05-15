@@ -1,13 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Index";
 }
+<link rel="stylesheet" href="@Url.Content("~/css/index.css")" asp-append-version="true" />
 
-<h1>TP 04 - Paquetes  turisticos</h1>
-<h2>Bienvenido a ortworld paquetes turisticos para crear un paquete haga click en crear paquete:</h2>
+<h1>Bienvenido a ORTworld Paquetes Turisticos</h1>
+<h2>Para crear un paquete haga click <a href='@Url.Action("SelectPaquete")'> aqui </a></h2>
 
-<a href='@Url.Action("SelectPaquete")'> Crear paquete </a>
-
-<h2>Paquetes Creados:</h2>
+<br>
+<h2>Estos son los paquetes que ha creado:</h2>
 
 
 @if (ViewBag.h)
@@ -15,10 +15,12 @@
     
 
     @foreach(var i in ViewBag.paquetes) {
-        <h4>@i.Key</h4>
-        <img src="@Url.Content(i.Value.Aereo)" width="18%" height="auto" alt="Aerolinea"></img>
-        <img src="@Url.Content(i.Value.Excursion)"width="18%" height="auto" alt="Excursion"></img>
-        <img src="@Url.Content(i.Value.Hotel)"width="18%" height="auto" alt="Hotel"></img>
+        <div>
+            <h4>@i.Key</h4>
+            <img src="@Url.Content(i.Value.Aereo)" width="18%" height="auto" alt="Aerolinea"></img>
+            <img src="@Url.Content(i.Value.Excursion)"width="18%" height="auto" alt="Excursion"></img>
+            <img src="@Url.Content(i.Value.Hotel)"width="18%" height="auto" alt="Hotel"></img>
+        </div>
     }
 }
 
