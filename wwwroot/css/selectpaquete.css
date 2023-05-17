@@ -5,7 +5,18 @@ div div{
     border-color: rgb(11, 39, 100);
     width: 100%;
 }
-
+@keyframes moverlista{
+  from {left: 0px;}
+  to {left: 600px; rotate:180deg;}
+}
+.lista{
+  width: 20%;
+  position: relative;
+}
+.lista:hover{
+  animation-name: moverlista;
+  animation-duration: 4s;
+}
 div div, input{
   margin: 20px 0px 20px 0px;
 }
@@ -36,4 +47,10 @@ input[type=submit] {
   border-color: violet;
   font-size: x-large;
   color:white;
+  transition: background-color 0.2s ease-in-out;
+  cursor:pointer;
+}
+
+input[type=submit]:hover{
+  background-color:rgb(10, 145, 43);
 }

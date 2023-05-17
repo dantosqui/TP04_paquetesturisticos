@@ -10,12 +10,13 @@
 
 <form action='@Url.Action("GuardarPaquete")'>
     <h3>Seleccione el destino:</h3>
-    <ol>
+    <div class="lista"><ol>
         @for (int i = 0; i < ViewBag.ListaDestinos.Count; i++)
         {
             <li>@ViewBag.ListaDestinos[i]</li>
         }
     </ol>
+    </div>
     <input type="number" name="destino"> </input>
 
     <h3>Seleccione Excursion</h3>

@@ -1,15 +1,31 @@
-a{
-    color:rgb(106, 211, 36);
-    size: 2em;
+.ortworld:hover{
+    color: red;
+    transition: color 60s ease-in-out;
 }
-div h1{
+a{
+    background-color: slategrey;
+    padding: 10px 40px 20px 40px;
+    border-radius: 40px;
+    font-size: 120px;
+    border: 20px;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+    cursor:cell;
+    text-align: center;
+    display:grid;
+    width: 97%;
+}
+a:hover{
+    background-color: green;
+}
+h1{
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-div h1, h2 {
+h1, h2 {
     text-align: center;
 }
 
-div section{
+section{
     border-color: blueviolet;
     border-style: groove;
     border-width: 20px;
@@ -17,17 +33,18 @@ div section{
     width: 100%;
     height:20%;
     float: left;
+    margin-bottom: 1%;
 }
-div section h4{
+section h4{
     text-align: center;
     color: rgb(167, 14, 90);
 }
-div section div {
+Section div {
     
     float:left;
     padding: 5px;
     width: 32%;
 }
-div section div h5{
+section div h5{
     text-align: center;
 }

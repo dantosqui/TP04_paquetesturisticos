@@ -3,16 +3,15 @@
 }
 <link rel="stylesheet" href="@Url.Content("~/css/index.css")" asp-append-version="true" />
 
-<h1>Bienvenido a ORTworld Paquetes Turisticos</h1>
-<h2>Para crear un paquete haga click <a href='@Url.Action("SelectPaquete")'> aqui </a></h2>
+<h1>Bienvenido a<div class="ortworld">ORTworld</div> Paquetes Turisticos</h1>
 
 <br>
-<h2>Estos son los paquetes que ha creado:</h2>
 
 
 @if (ViewBag.h)
 {
     
+<h2>Estos son los paquetes que ha creado:</h2>
 
     @foreach(var i in ViewBag.paquetes) {
         <section>
@@ -24,7 +23,13 @@
             <div><h5 >Hotel:</h5>
             <img src="@Url.Content(i.Value.Hotel)"width="100%" height="auto" alt="Hotel"></img></div>
         </section>
+        <br>
     }
+}else{
+    <h2>Aun no hay paquetes!</h2>
 }
+
+<a href='@Url.Action("SelectPaquete")'>+</a>
+
 <!--idea: abajo de todo poner un div grande tipo boton que diga "+"
 -->
