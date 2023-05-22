@@ -22,6 +22,12 @@
             <img src="@Url.Content(i.Value.Excursion)"width="100%" height="auto" alt="Excursion"></img></div>
             <div><h5 >Hotel:</h5>
             <img src="@Url.Content(i.Value.Hotel)"width="100%" height="auto" alt="Hotel"></img></div>
+            <a href='@Url.Action("Borrarpaquete", new {destino=i.Key})' class="borrar" width="30px" height="auto">
+            <div class="imagenes" width="30px" height="auto">
+                    <img src=~/img/tachito-02.png width="30px" height="auto" class="tachocerrado">
+                    <img src=~/img/tachito-01.png width="30px" height="auto" class="tachoabierto">
+            </div>
+            </a>
         </section>
         <br>
     }
@@ -29,7 +35,4 @@
     <h2>Aun no hay paquetes!</h2>
 }
 
-<a href='@Url.Action("SelectPaquete")'>+</a>
-
-<!--idea: abajo de todo poner un div grande tipo boton que diga "+"
--->
+<a href='@Url.Action("SelectPaquete")' class="añadir">+</a>

@@ -39,4 +39,11 @@ public class HomeController : Controller
         ViewBag.paquetes=OrtWorld.Paquetes;
         return View("Index");}    
     }
+    public IActionResult BorrarPaquete(string destino) {
+        
+        ViewBag.paquetes =OrtWorld.Paquetes;
+        ViewBag.h=OrtWorld.hayPaquetes;
+        OrtWorld.BorrarPaquete(destino);
+        return View("Index");
+    }
 }

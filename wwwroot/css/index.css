@@ -2,7 +2,7 @@
     color: red;
     transition: color 60s ease-in-out;
 }
-a{
+.añadir{
     background-color: slategrey;
     padding: 10px 40px 20px 40px;
     border-radius: 40px;
@@ -15,9 +15,29 @@ a{
     display:grid;
     width: 97%;
 }
-a:hover{
+.añadir:hover{
     background-color: green;
 }
+
+.imagenes{
+    position:absolute;
+}
+.tachoabierto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.tachocerrado {
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+.imagenes:hover .tachoabierto{
+    display:inline;
+    
+}
+
 h1{
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
